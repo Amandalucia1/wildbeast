@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Vollkorn',Georgia, serif;
+}
+img{
+    display: block;
+    width: 100%;
+    border-radius: 5PX;
+    
+}
+ul li{
+    list-style: none;  
+}
+    
+
+/*menu*/
+.estrutura{ 
+   display: grid;
+   grid-template-columns: minmax(160px,1fr) 3fr 300px;
+   grid-template-areas: 
+   "header header header"
+   "sidenav content anuncio"
+   "footer footer footer"
+   ;
+}
+.header{
+    background: linear-gradient(135deg,#8844ee, #b07dfb);
+    grid-area: header;
+    padding: 30px;
+    display: grid;
+    grid-template-columns:  1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+.logo{
+    max-width: 200px;
+}
+.menu { 
+    gap: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125rem;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    transition: .2s;
+}
+.menu a:hover{
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+
+/*SIDENAV*/
+.sidenav{
+    grid-area: sidenav;
+    background: #fafbfc;
+    padding: 30px;
+    
+}
+.sidenav li a{
+    display: block;
+    min-width: 60px;
+    max-width: 150px;
+    background-color: #fff;
+    margin: 0 auto 30px 0;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    transition: .2s ease-out;
+}
+.sidenav a:hover{
+    background-color:#b07dfb;
+}
+
+/*content*/
+.content{
+    grid-area: content;
+    background-color: #fff;
+    max-width: 900px;
+    margin:0 auto;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+.titulo h1{
+    font-size: 3rem;
+    line-height: 1.4;
+    font-family: Georgia, serif;
+    color: #b07dfb;
+    font-weight: 700;
+    max-width: 5ch;
+}
+.titulo span{
+    font-size: .8rem;
+    font-family: Georgia, serif;
+    color: #b07dfb;
+    font-weight: 700;
+    font-style: italic;
+}
+.espandir{
+    grid-column: 1/-1;
+}
+
+/*Caracteristica*/
+.caracteristica{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    
+}
+.caracteristica div{
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg,#8844ee, #b07dfb);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+
+}
+.numero{
+    font-size: 3rem;
+    color: #b07dfb;
+    display: block;
+    margin: 10px auto;
+}
+.rotulo{
+    padding: 10px;
+    background-color: #fff;
+    font-size: .8rem;
+    color: #b07dfb;
+    display: block;
+    border-radius: 0 0 5px 5px;
+}
+.img-1{
+    grid-row: span 2;
+    align-self: end;
+}
+.img-2{
+    align-self: end;
+}
+
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .7);
+    letter-spacing: -0.005em;
+}
+.content ul{
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: Curier, monospace;
+}
+.content ul,blockquote{
+    background: linear-gradient(135deg,#8844ee, #b07dfb);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .1);
+    align-self: start;
+}
+.content li{
+   padding: 10px;
+}
+.content ul li+li{
+    border-top: 2px solid #b07dfb;
+}
+.informacoes p + p{
+    padding-top: 30px;
+}
+.desc{
+    color: #b07dfb;
+    font-size: .9rem;
+    max-width: 16rem;
+}
+blockquote p{
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*  ANUNCIO*/
+.anuncio{
+    grid-area: anuncio;
+    padding: 30px;
+    background: #fafbfc;
+    display: grid;
+    align-content: start;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+
+
+}
+.anuncio-item{
+    margin-bottom: 30px;
+}
+
+/*FOOTER*/ 
+.footer{
+    grid-area: footer;
+    background: linear-gradient(135deg,#8844ee, #b07dfb);
+    color: #fff;
+    padding: 30px;
+    font-size: 1.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+@keyframes seta{
+    from{
+        right: 30px;
+    }
+    to{
+        right: 20px;
+    }
+}
+@media (max-width:1000px){
+    .estrutura{
+        grid-template-areas: 
+        "header header header"
+        "sidenav content content"
+        "sidenav anuncio anuncio"
+        "footer footer footer"
+        ;
+    }
+}
+@media (max-width:780px){
+    .estrutura{
+       grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "sidenav"
+        "content"
+        "anuncio"
+        "footer"
+        ;
+    }
+    .sidenav{
+        position: relative;
+    }
+    .sidenav ul{
+        display: flex;
+        gap: 30px;
+        margin: 0 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    }
+    .sidenav::after{
+        position: absolute;
+        content: ' →';
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, .4);
+        animation:  seta .5s ease-in 0s infinite alternate;
+    }
+    .sidenav li{
+        flex: 1 0 100px;
+
+    }
+}
+
+@media (max-width:600px){
+    .header{
+        grid-template-columns:  1fr; 
+        justify-content: center;    
+    }
+    .logo {
+        margin: auto;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .content{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .titulo h1{
+        max-width: 10ch;
+    }
+    .footer {
+        margin-top: 0px;
+        text-align: center;
+    }
+    .desc {
+        font-size: 1rem;
+        max-width: 28rem;
+    }
+    p {
+        text-align: center;
+    }
+    
+}
