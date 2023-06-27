@@ -18,7 +18,7 @@
 
 ## 💻 Sobre o projeto
 
-Desenvolvi uma página que usa somente Grid Css, que possui informações sobre lobos cinzas.
+Foi uma página desenvolvida no curso de CSS GRID da Origamid que usa somente Grid Css, que possui informações sobre lobos cinzas.
 
 ---
 
