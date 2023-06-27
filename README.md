@@ -24,8 +24,10 @@ Foi uma página desenvolvida no curso de CSS GRID da Origamid que usa somente Gr
 
 ## ⚙️ Funcionalidades
 
-- [x] Pessoas num geral terão acesso :
-  - [x] Informações sobre Lobos Cinzas
+- [x] Descrição sobre Lobos Cinzas:
+  - [x] A descrição pode incluir informações sobre a aparência, habitat, comportamento, alimentação e curiosidades relacionadas aos lobos cinzas.
+
+
 
 ---
 
