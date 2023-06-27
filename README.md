@@ -20,6 +20,8 @@
 
 Desenvolvi uma página que usa somente Grid Css, que possui informações sobre lobos cinzas.
 
+---
+
 ## ⚙️ Funcionalidades
 
 - [x] Pessoas num geral terão acesso :
@@ -33,6 +35,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - Git e Github
+
+---
+
 ## 🎨 Layout
 
 ### Mobile
@@ -49,7 +54,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 </p>
 
-
+---
 
 ## 🦸 Autor
 
